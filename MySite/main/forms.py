@@ -13,13 +13,6 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ['theme', 'email', 'phone_number', 'address', 'description', 'photo']
-        labels = {
-            'theme': 'тема',
-            'email': 'Электронная почта',
-            'phone_number': 'Номер телефона',
-            'address': 'Адрес доставки',
-            'description': 'Описание',
-            'photo': 'Фото'
-        }
+
 
 

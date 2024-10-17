@@ -20,6 +20,7 @@
                 <strong>Здравствуйте, {{user.username}}!</strong>
             </span>
             {% if user.is_superuser %}
+                <a href="{% url 'main:orders_admin' %}">Актуальные заказы</a>-
                 <a href="{% url 'admin:index' %}">Управление</a>-
             {% endif %}
             <a href="{% url 'users:logout' %}">Выйти</a>

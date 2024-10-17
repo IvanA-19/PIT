@@ -1,0 +1,264 @@
+[
+{
+  "model": "main.order",
+  "pk": 10,
+  "fields": {
+    "theme": "Глиняный горшок",
+    "user": 6,
+    "email": "ivan.a260303@gmail.com",
+    "phone_number": "81234567890",
+    "address": "Зеленый город, ул. Полевая, д.6",
+    "description": "Глиняный горшок с узорами.",
+    "photo": "media/orderPhotos/1_027_785_1yznshi.jpg"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-09-05T13:41:05.259Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Глиняный горшок",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-09-05T14:40:20.385Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-10-17T19:06:16.554Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "5",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-10-17T19:06:16.554Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-10-17T19:06:16.554Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-10-17T19:06:16.554Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Глиняный горшок",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-10-17T20:23:37.283Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "9",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-10-17T20:23:37.283Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "8",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-10-17T20:23:37.283Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "7",
+    "object_repr": "Метеостанция",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-10-17T20:23:55.675Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "6",
+    "object_repr": "Глиняный горшок",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-10-17T20:24:05.098Z",
+    "user": 4,
+    "content_type": 3,
+    "object_id": "10",
+    "object_repr": "Глиняный горшок",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$W4Z1HALikpyaVrrHSj8yH7$d55+8Oc73KvUEQAE2dxfWyuIsqH0Pf0teU52d9cpQmU=",
+    "last_login": "2024-09-05T14:30:32.630Z",
+    "is_superuser": true,
+    "username": "aleks",
+    "first_name": "",
+    "last_name": "",
+    "email": "example@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-09-05T13:23:46.326Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$CVKFhmIEoYeO1IPQWleN9y$s/E++Jks3k+CRFPhne6VoBrFoF0MPdDScBlZbX3HAec=",
+    "last_login": "2024-09-05T14:30:07.052Z",
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "Иван",
+    "last_name": "Алексеев",
+    "email": "alekwseev.i260303@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-05T14:30:05.994Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$Bd7mxQii7bJSOeL2jeuf72$fuKCjSl82jiuHvA2Ba7+IVWAvOGrP7ou2nJI0fKAI9k=",
+    "last_login": "2024-10-17T19:55:39.438Z",
+    "is_superuser": true,
+    "username": "admin1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-17T10:48:50.175Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$hgD7oJLJvU8YCDBg8RCHNR$RR21s/3CPxucNGrpPwFYJFxrUvaDojcSVlNFAAQfUhI=",
+    "last_login": "2024-10-17T10:49:52.554Z",
+    "is_superuser": false,
+    "username": "admin123",
+    "first_name": "Иван",
+    "last_name": "Алексеев",
+    "email": "alekseev.i260303@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-17T10:49:51.893Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$bajBfcT67kP0nUaJHxMcrA$CYKZAVzyX9pwuPh66557uT00Wlf7lNBhlMOnRdOkrVQ=",
+    "last_login": "2024-10-17T19:29:41.524Z",
+    "is_superuser": false,
+    "username": "greensail",
+    "first_name": "green",
+    "last_name": "sail",
+    "email": "greensails72@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-10-17T19:29:40.871Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0jvw5vv1vzyc4z0ouurb7qa2o41tnecd",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrdfyjpOcM1tre4ABypDipEHeHSCmgfTPzXiLStta4dV7iVMRZKHH63RLlB7cdlDu12yzz3NZlSnJX5EG7vM6Fn5fD_Tuo1Ou3RkfOMrECjYUGZYMFg3o0mMG5wim7EAogOPRG62QC-cyAg2Uz-gDi_QHDVjbj:1smDVI:uOZropHD-_S0z4TZ4U3bbARwGwHVyZzqz3ZJLmJlJTk",
+    "expire_date": "2024-09-19T14:30:32.670Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dgob46q7t2mwxvzvlz815xsp6jl6on96",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8ZVy67zcQhgGpGkhKuzL-uzbpQrf3nHNfLMRtrWEbeQkzsQsz7PS7YUyP3HZA99hunafe1mVGviv8oINPnfLzerh_BzWO-q2dzCgtyIQYoxTGalVQKQ_Jp0LeFEtKE1AuDjSgRdRnXxAQhSwgHHt_APVFOGo:1t1Wax:_uTwm7LrF7LXdzQagoQcG_KCCuEhsqF2-Y9Z3U0IcxY",
+    "expire_date": "2024-10-31T19:55:39.469Z"
+  }
+}
+]

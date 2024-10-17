@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'MySite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MySite',
+        'NAME': 'MyDjangoApp',
         'USER': 'postgres',
         'PASSWORD': '12345678',
         'HOST': 'localhost'
@@ -142,7 +142,7 @@ INTERNAL_IPS = [
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "alekseev.i260303@gmail.com"
+EMAIL_HOST_USER = "greensails72@gmail.com"
 EMAIL_HOST_PASSWORD = "vcum hrpf ibcj lkmj"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
