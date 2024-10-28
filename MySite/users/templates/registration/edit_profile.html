@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block title %}Редактирование профиля{% endblock %}
+
+{% block page_header %}
+    <h1>Редактирование профиля</h1>
+{% endblock %}
+
+
+{% block content %}
+    <form action="{% url 'users:edit_profile' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="Сохранить изменения" button_class="btn-success" %}
+    </form>
+    <input type="hidden" name="next" value="{% url 'users:profile' %}">
+
+    <link rel="stylesheet" href="{% static 'users/css/forms.css' %}">
+
+{% endblock %}

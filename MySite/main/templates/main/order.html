@@ -1,13 +1,19 @@
 {% extends 'main/base.html' %}
 
+{% load django_bootstrap5 %}
+{% load static %}
+
 {% block title %}Оформление заказа{% endblock %}
+
+{% block page_header %}Оформление заказа{% endblock %}
 
 {% block content %}
     <form action="{% url 'main:order' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Подтвердить</button>
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="Подтвердить" button_class="btn-success" %}
     </form>
     <input type="hidden" name="next" value="{% url 'main:index' %}">
 
+    <link rel="stylesheet" href="{% static 'main/css/forms.css' %}">
 {% endblock %}

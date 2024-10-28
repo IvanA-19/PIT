@@ -1,1 +1,16 @@
 {% extends 'main/base.html' %}
+
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block title %}Обо мне{% endblock %}
+
+{% block page_header %}
+    <h1>Обо мне</h1>
+
+{% block content %}
+    <h1>Напишите о себе</h1>
+
+    <link rel="stylesheet" href="{% static 'main/css/about_me.css' %}">
+{% endblock %}
+

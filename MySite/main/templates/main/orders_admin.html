@@ -1,21 +1,30 @@
 {% extends 'main/base.html' %}
 
+{% load django_bootstrap5 %}
+{% load static %}
+
 {% block title %}Актуальные заказы{% endblock %}
+
+{% block page_header %}
+    <h1>Актуальные заказы</h1>
+{% endblock %}
 
 {% block content %}
     {% for order in actual_orders %}
         <div class="order">
-            <h1>{{order}}</h1>
-            <h2>Заказчик: {{order.user.username}}</h2>
-            <h2>ФИО: {{order.user.first_name}} {{order.user.last_name}}</h2>
-            <h2>Телефон: {{order.phone_number}}</h2>
-            <h2>Адрес электронной почты: {{order.email}}</h2>
-            <h2>Пожелания пользователя:<br>{{order.description}}</h2>
-            <h2>Фото:</h2>
+            <h2>{{order}}</h2>
+            <h3>Заказчик: {{order.user.username}}</h3>
+            <h3>ФИО: {{order.user.first_name}} {{order.user.last_name}}</h3>
+            <h3>Телефон: {{order.phone_number}}</h3>
+            <h3>Адрес электронной почты: {{order.email}}</h3>
+            <h3>Пожелания пользователя:<br>{{order.description}}</h3>
+            <h3>Фото:</h3>
             <img src="{{order.photo.url}}" alt="Фото заказа" width="600px" height="auto">
-            <h2>Адрес доставки: {{order.address}}</h2>
+            <h3>Адрес доставки: {{order.address}}</h3>
         </div>
     {% empty %}
-        <h1>На данный момент нет актуальных заказов</h1>
+        <h2>На данный момент нет актуальных заказов</h2>
     {% endfor %}
+
+    <link rel="stylesheet" href="{% static 'main/css/orders.css' %}">
 {% endblock %}

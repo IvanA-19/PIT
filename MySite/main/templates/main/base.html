@@ -1,3 +1,6 @@
+{% load django_bootstrap5 %}
+{% load static %}
+
 <!doctype html>
 <html lang="ru">
     <head>
@@ -8,26 +11,124 @@
         <title>
             {% block title %}{% endblock %}
         </title>
+
+        <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+        <link rel="icon" href="{% static 'main/images/icon/icon.jpeg' %}">
+
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
     </head>
 
     <body>
-        <a href="{% url 'main:index' %}">Главная</a>-
-        <a href="{% url 'main:about_me' %}">Обо мне</a>-
-        <a href="{% url 'main:projects' %}">Мои работы</a>-
-        <a href="{% url 'main:order' %}">Заказать</a>-
-        {% if user.is_authenticated %}
-            <span>
-                <strong>Здравствуйте, {{user.username}}!</strong>
-            </span>
-            {% if user.is_superuser %}
-                <a href="{% url 'main:orders_admin' %}">Актуальные заказы</a>-
-                <a href="{% url 'admin:index' %}">Управление</a>-
-            {% endif %}
-            <a href="{% url 'users:logout' %}">Выйти</a>
-        {% else %}
-            <a href="{% url 'users:login' %}">Войти</a>
-        {% endif %}
+        <nav class="navbar navbar-expand-md navbar-dark mb-4 border">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'main:index' %}" style="font-size: 24pt" onmouseover="this.style.color='#90EE90'"
+                onmouseout="this.style.color='gold'">Главная</a>
 
-        {% block content %}{% endblock %}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 14pt">
+                        <li class="nav-item">
+                            <a href="{% url 'main:about_me' %}" class="nav-link">Обо мне</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'main:projects' %}" class="nav-link">Мои работы</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'main:order' %}" class="nav-link">Заказать</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto" style="font-size: 14pt">
+                        {% if user.is_authenticated %}
+                            <span class="navbar-text" style="color: mediumspringgreen;"><strong>Здравствуйте, {{ user.username }}!</strong></span>
+                            {% if user.is_superuser %}
+                                <li class="nav-item">
+                                    <a href="{% url 'main:orders_admin' %}" class="nav-link">Актуальные заказы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'admin:index' %}">Управление</a>
+                                </li>
+                            {% else %}
+                                {% if avatar %}
+                                    <li class="nav-item">
+                                       <img src="{{avatar.url}}" alt="user_avatar" width="60px" style="border-radius: 20px; margin-left: 7px;">
+                                    </li>
+                                {% else %}
+                                    <li class="nav-item">
+                                       <img src="{% static 'main/images/avatars/void_avatar.jpg' %}"
+                                            alt="user_avatar" width="60px" style="border-radius: 20px; margin-left: 7px;">
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'users:profile' %}">Перейти в профиль</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'users:logout' %}">Выйти</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a href="{% url 'users:login' %}">Войти</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main role="main" class="container">
+            <div class="base">
+                <div class="header pb-2 mb-2 border-bottom">
+                    {% block page_header %}{% endblock %}
+                </div>
+
+                <div class="content">
+                    {% block content %}{% endblock %}
+                </div>
+
+                <div class="footer">
+                    <div style="float: left; margin-right: 15px">
+                        <h6>По возникающим вопросам писать на почту
+                            <br>или в телеграм</h6>
+                        <div>example72@gmail.com</div>
+                        <div><a href="#" style="color: white">User Userov</a></div>
+                    </div>
+
+                    <div style="float: left; margin-right: 15px">
+                        <h6 style="text-align: left;  width: 135px">Чаты в соцсетях</h6>
+                        <div style=" float: left; margin-right: 15px">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'main/images/logo/img_1.png' %}" alt="" width="60px" height="60px">
+                            </a>
+                        </div>
+
+                        <div style="margin-top: 5px;">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'main/images/logo/img_2.png' %}"
+                                     alt="" width="60px" height="60px">
+                            </a>
+                        </div>
+                    </div>
+                    <div style="float: left">
+                        <h6>Сервер в Discord</h6>
+                        <div style="margin-right: 15px; float: left">
+                            <a href="#" target="_blank">
+                                <img src="{% static 'main/images/logo/ds_logo.png' %}"
+                                     alt="Discord" width="60px" height="60px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="btn-up btn-up_hide"></div>
+        <script src="{% static 'main/js/base.js' %}"></script>
     </body>
 </html>

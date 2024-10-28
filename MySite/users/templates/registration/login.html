@@ -1,14 +1,27 @@
 {% extends 'main/base.html' %}
 
+{% load django_bootstrap5 %}
+{% load static %}
+
 {% block title %}Авторизация{% endblock %}
+
+{% block page_header %}
+    <h1>Авторизация</h1>
+{% endblock %}
 
 {% block content %}
     <form class="form" action="{% url 'users:login' %}" method="post">
         {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Войти</button>
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="Войти" button_class="btn-success" %}
         <input type="hidden" name="next" value="{% url 'main:index' %}" />
     </form>
-    <p>Еще нет аккаунта?</p>
-    <a href="{% url 'users:register' %}">Регистрация</a>
+
+    <div class="reg">
+        <p>Еще нет аккаунта?</p>
+        <a href="{% url 'users:register' %}" class="btn btn-primary">Регистрация</a>
+    </div>
+
+
+    <link rel="stylesheet" href="{% static 'users/css/forms.css' %}">
 {% endblock %}

@@ -1,0 +1,20 @@
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.reg{
+    background-color: #C9F0DD;
+    border-radius: 15px;
+    padding: 15px;
+    border: solid darkgreen;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reg p{
+    font-weight: bold;
+    font-size: 16pt;
+    color: MidnightBlue;
+}
+

@@ -1,10 +1,20 @@
 {% extends 'main/base.html' %}
 
+{% load django_bootstrap5 %}
+{% load static %}
 
 {% block title %}Заказ оформлен{% endblock %}
 
+{% block page_header %}
+    <h1>Заказ оформлен</h1>
+{% endblock %}
+
 {% block content %}
-    <h1>Спасибо за ваш заказ!</h1>
-    <h2>Администратор сайта скоро свяжется с вами для уточнения деталей.</h2>
-    <a href="{% url 'main:index' %}" type="button">Вернуться на сайт</a>
+    <div class="ordered_content">
+        <h2>Спасибо за ваш заказ!</h2>
+        <h3>Администратор сайта скоро свяжется с вами для уточнения деталей.</h3>
+        <a href="{% url 'main:index' %}" class="btn btn-lg btn-success">Вернуться на сайт</a>
+    </div>
+
+    <link rel="stylesheet" href="{% static 'main/css/ordered.css' %}">
 {% endblock %}
